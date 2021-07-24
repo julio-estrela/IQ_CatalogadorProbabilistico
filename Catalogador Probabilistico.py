@@ -151,6 +151,7 @@ while True:
                     pass
             cor_operacao = 'g' if vela['open'] < vela['close'] else 'r' if vela['open'] > vela['close'] else 'd'
             entrada_analise = ['g' if candles[(index - i)]['open'] < candles[(index - i)]['close'] else 'r' if candles[(index - i)]['open'] > candles[(index - i)]['close'] else 'd' for i in range(1, 4)]
+            #erro de sintaxe na linha 155 não consegui consertar logo no segundo if###
             entrada_analise = 'g' if False if entrada_analise.count('d') > 0 else entrada_analise.count('r') > entrada_analise.count('g') else 'r' if entrada_analise.count('g') > entrada_analise.count('r') else False
             if entrada_analise != False:
                 if entrada_analise == cor_operacao:
